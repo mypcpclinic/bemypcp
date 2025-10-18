@@ -101,19 +101,42 @@ closeButtons.forEach(button => {
     });
 });
 
+// Rate limiting for form submissions
+let lastSubmitTime = 0;
+const SUBMIT_COOLDOWN = 5000; // 5 seconds between submissions
+
+function sanitizeInput(input) {
+    const div = document.createElement('div');
+    div.textContent = input;
+    return div.innerHTML;
+}
+
 // Contact form submission
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
+    // Rate limiting check
+    const now = Date.now();
+    if (now - lastSubmitTime < SUBMIT_COOLDOWN) {
+        alert('Please wait a few seconds before submitting again.');
+        return;
+    }
+    
     // Get form data
     const formData = new FormData(this);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
+    const name = sanitizeInput(formData.get('name'));
+    const email = sanitizeInput(formData.get('email'));
+    const message = sanitizeInput(formData.get('message'));
     
     // Basic validation
     if (!name || !email || !message) {
         alert('Please fill in all fields.');
+        return;
+    }
+    
+    // Length validation
+    if (name.length > 100 || email.length > 100 || message.length > 1000) {
+        alert('Input too long. Please shorten your message.');
         return;
     }
     
@@ -123,6 +146,8 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         alert('Please enter a valid email address.');
         return;
     }
+    
+    lastSubmitTime = now;
     
     // Send email using FormSubmit
     fetch('https://formsubmit.co/mypcpclinic@gmail.com', {
@@ -155,18 +180,31 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 document.getElementById('appointmentForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
+    // Rate limiting check
+    const now = Date.now();
+    if (now - lastSubmitTime < SUBMIT_COOLDOWN) {
+        alert('Please wait a few seconds before submitting again.');
+        return;
+    }
+    
     // Get form data
     const formData = new FormData(this);
-    const serviceType = formData.get('serviceType');
-    const appointmentDate = formData.get('appointmentDate');
-    const appointmentTime = formData.get('appointmentTime');
-    const patientName = formData.get('patientName');
-    const patientEmail = formData.get('patientEmail');
-    const patientPhone = formData.get('patientPhone');
+    const serviceType = sanitizeInput(formData.get('serviceType'));
+    const appointmentDate = sanitizeInput(formData.get('appointmentDate'));
+    const appointmentTime = sanitizeInput(formData.get('appointmentTime'));
+    const patientName = sanitizeInput(formData.get('patientName'));
+    const patientEmail = sanitizeInput(formData.get('patientEmail'));
+    const patientPhone = sanitizeInput(formData.get('patientPhone'));
     
     // Basic validation
     if (!serviceType || !appointmentDate || !appointmentTime || !patientName || !patientEmail || !patientPhone) {
         alert('Please fill in all fields.');
+        return;
+    }
+    
+    // Length validation
+    if (patientName.length > 100 || patientEmail.length > 100 || patientPhone.length > 20) {
+        alert('Input too long. Please check your entries.');
         return;
     }
     
@@ -176,6 +214,8 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
         alert('Please enter a valid email address.');
         return;
     }
+    
+    lastSubmitTime = now;
     
     // Phone validation (basic)
     const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
