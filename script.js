@@ -182,6 +182,21 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     
     lastSubmitTime = now;
     
+    // Execute reCAPTCHA v3
+    if (typeof grecaptcha !== 'undefined') {
+        grecaptcha.ready(() => {
+            grecaptcha.execute('6LfAIu8rAAAAAGUUu6rdFSv5ISgBTmqCku3r4HMv', {action: 'contact_form'}).then((token) => {
+                // Send form with reCAPTCHA token
+                submitContactForm(name, email, message, token);
+            });
+        });
+    } else {
+        // Fallback if reCAPTCHA fails to load
+        submitContactForm(name, email, message, null);
+    }
+});
+
+function submitContactForm(name, email, message, recaptchaToken) {
     // Send email using FormSubmit
     fetch('https://formsubmit.co/mypcpclinic@gmail.com', {
         method: 'POST',
@@ -194,20 +209,21 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
             email: email,
             message: message,
             _subject: 'New Contact Form Message from myPCP Website',
-            _template: 'table'
+            _template: 'table',
+            _captcha: recaptchaToken ? 'reCAPTCHA verified' : 'N/A'
         })
     })
     .then(response => response.json())
     .then(data => {
         console.log('Contact form submitted successfully');
         openConfirmationModal();
-        this.reset();
+        document.getElementById('contactForm').reset();
     })
     .catch(error => {
         console.error('Error submitting form:', error);
-        alert('There was an error sending your message. Please try again or contact us directly at mypcpclinic@gmail.com');
+        alert('There was an error sending your message. Please try again or contact us directly.');
     });
-});
+}
 
 // Appointment form submission
 document.getElementById('appointmentForm').addEventListener('submit', function(e) {
@@ -284,6 +300,21 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
     };
     const serviceLabel = serviceLabels[serviceType] || serviceType;
     
+    // Execute reCAPTCHA v3
+    if (typeof grecaptcha !== 'undefined') {
+        grecaptcha.ready(() => {
+            grecaptcha.execute('6LfAIu8rAAAAAGUUu6rdFSv5ISgBTmqCku3r4HMv', {action: 'appointment_form'}).then((token) => {
+                // Send form with reCAPTCHA token
+                submitAppointmentForm(patientName, patientEmail, patientPhone, serviceLabel, appointmentDate, appointmentTime, token);
+            });
+        });
+    } else {
+        // Fallback if reCAPTCHA fails to load
+        submitAppointmentForm(patientName, patientEmail, patientPhone, serviceLabel, appointmentDate, appointmentTime, null);
+    }
+});
+
+function submitAppointmentForm(patientName, patientEmail, patientPhone, serviceLabel, appointmentDate, appointmentTime, recaptchaToken) {
     // Send appointment email using FormSubmit
     fetch('https://formsubmit.co/mypcpclinic@gmail.com', {
         method: 'POST',
@@ -299,7 +330,8 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
             'Appointment Date': appointmentDate,
             'Appointment Time': appointmentTime,
             _subject: 'New Appointment Request from myPCP Website',
-            _template: 'table'
+            _template: 'table',
+            _captcha: recaptchaToken ? 'reCAPTCHA verified' : 'N/A'
         })
     })
     .then(response => response.json())
@@ -322,13 +354,13 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
         openConfirmationModal();
         
         // Reset form
-        this.reset();
+        document.getElementById('appointmentForm').reset();
     })
     .catch(error => {
         console.error('Error submitting appointment:', error);
         alert('There was an error submitting your appointment. Please try again or call us directly.');
     });
-});
+}
 
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
