@@ -1106,3 +1106,39 @@ a:focus {
         background: white !important;
     }
 }
+
+/* Form Notice Styles */
+.form-notice {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.form-notice p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #856404;
+    line-height: 1.6;
+}
+
+.form-notice a {
+    color: #856404;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.form-notice strong {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* Honeypot - hidden from view */
+.honeypot {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+}

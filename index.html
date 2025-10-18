@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- Google reCAPTCHA v3 -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfYourSiteKey" async defer></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -396,7 +398,14 @@
             
             <div class="contact-content">
                 <div class="contact-form">
+                    <div class="form-notice">
+                        <p><strong>⚠️ Important:</strong> Do NOT include any medical information or personal health details in this form. For medical questions, please call us at <a href="tel:7865255664">(786) 525-5664</a>.</p>
+                    </div>
                     <form id="contactForm">
+                        <!-- Honeypot field (hidden from users, visible to bots) -->
+                        <div class="honeypot" style="position: absolute; left: -9999px;">
+                            <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+                        </div>
                         <div class="form-group">
                             <input type="text" id="name" name="name" placeholder="Name" required>
                         </div>
@@ -404,7 +413,7 @@
                             <input type="email" id="email" name="email" placeholder="Email" required>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
+                            <textarea id="message" name="message" placeholder="Message (General inquiries only - no medical information)" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="cta-button">We'd love to hear from you.</button>
                     </form>
@@ -421,7 +430,7 @@
                     </div>
                     <div class="info-item">
                         <h3>Email</h3>
-                        <p><a href="mailto:mypcpclinic@gmail.com">mypcpclinic@gmail.com</a></p>
+                        <p><a href="#" onclick="sendEmail(); return false;" id="email-link">Click to reveal email</a></p>
                     </div>
                     <div class="info-item">
                         <h3>Office Hours</h3>
@@ -437,7 +446,14 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Book an Appointment</h2>
+            <div class="form-notice">
+                <p><strong>⚠️ Privacy Notice:</strong> This form is for appointment requests only. Do NOT include medical information or health details.</p>
+            </div>
             <form id="appointmentForm">
+                <!-- Honeypot field -->
+                <div class="honeypot" style="position: absolute; left: -9999px;">
+                    <input type="text" name="website" id="website2" tabindex="-1" autocomplete="off">
+                </div>
                 <div class="form-group">
                     <label for="serviceType">Service Type</label>
                     <select id="serviceType" name="serviceType" required>
@@ -554,7 +570,7 @@
                     <h3>Contact Info</h3>
                     <div class="contact-info">
                         <p><strong>Phone:</strong> <a href="tel:7865255664">(786) 525-5664</a></p>
-                        <p><strong>Email:</strong> <a href="mailto:mypcpclinic@gmail.com">mypcpclinic@gmail.com</a></p>
+                        <p><strong>Email:</strong> <a href="#" onclick="sendEmail(); return false;">Contact via form</a></p>
                         <p><strong>Address:</strong> Miami, FL</p>
                         <p><strong>Hours:</strong> Mon-Fri 9:00 AM - 5:00 PM</p>
                     </div>
@@ -563,10 +579,9 @@
             
             <div class="footer-bottom">
                 <div class="footer-legal">
-                    <a href="#privacy">Privacy Policy</a>
-                    <a href="#terms">Terms of Service</a>
-                    <a href="#hipaa">HIPAA Notice</a>
-                    <a href="#careers">Careers</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="hipaa-notice.html">HIPAA Notice</a>
+                    <a href="#contact">Contact</a>
                 </div>
                 <div class="footer-copyright">
                     <p>&copy; 2024 myPCP. All rights reserved.</p>

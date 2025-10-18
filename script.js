@@ -101,6 +101,23 @@ closeButtons.forEach(button => {
     });
 });
 
+// Email obfuscation
+function sendEmail() {
+    const em = 'mypcpclinic' + '@' + 'gmail.com';
+    const link = document.getElementById('email-link');
+    if (link) {
+        link.href = 'mailto:' + em;
+        link.textContent = em;
+        link.onclick = null;
+    }
+    // Also update footer email links
+    document.querySelectorAll('[onclick*="sendEmail"]').forEach(el => {
+        el.href = 'mailto:' + em;
+        el.textContent = em;
+        el.onclick = null;
+    });
+}
+
 // Rate limiting for form submissions
 let lastSubmitTime = 0;
 const SUBMIT_COOLDOWN = 5000; // 5 seconds between submissions
@@ -111,9 +128,25 @@ function sanitizeInput(input) {
     return div.innerHTML;
 }
 
+// Honeypot validation
+function checkHoneypot(form) {
+    const honeypot = form.querySelector('input[name="website"]');
+    if (honeypot && honeypot.value !== '') {
+        console.log('Bot detected via honeypot');
+        return false; // Bot detected
+    }
+    return true; // Human user
+}
+
 // Contact form submission
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
+    
+    // Honeypot check
+    if (!checkHoneypot(this)) {
+        console.log('Spam submission blocked');
+        return; // Silently reject bot submissions
+    }
     
     // Rate limiting check
     const now = Date.now();
@@ -179,6 +212,12 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 // Appointment form submission
 document.getElementById('appointmentForm').addEventListener('submit', function(e) {
     e.preventDefault();
+    
+    // Honeypot check
+    if (!checkHoneypot(this)) {
+        console.log('Spam submission blocked');
+        return; // Silently reject bot submissions
+    }
     
     // Rate limiting check
     const now = Date.now();
