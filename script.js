@@ -198,7 +198,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 
 function submitContactForm(name, email, message, recaptchaToken) {
     // Send email using FormSubmit
-    fetch('https://formsubmit.co/mypcpclinic@gmail.com', {
+    fetch('https://formsubmit.co/ajax/mypcpclinic@gmail.com', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -213,15 +213,24 @@ function submitContactForm(name, email, message, recaptchaToken) {
             _captcha: recaptchaToken ? 'reCAPTCHA verified' : 'N/A'
         })
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
     .then(data => {
-        console.log('Contact form submitted successfully');
-        openConfirmationModal();
-        document.getElementById('contactForm').reset();
+        console.log('Contact form submitted successfully', data);
+        if (data.success === 'true' || data.success === true) {
+            openConfirmationModal();
+            document.getElementById('contactForm').reset();
+        } else {
+            alert(data.message || 'There was an error. Please call us at (786) 525-5664.');
+        }
     })
     .catch(error => {
         console.error('Error submitting form:', error);
-        alert('There was an error sending your message. Please try again or contact us directly.');
+        alert('There was an error sending your message. Please call us at (786) 525-5664 or email directly.');
     });
 }
 
@@ -316,7 +325,7 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
 
 function submitAppointmentForm(patientName, patientEmail, patientPhone, serviceLabel, appointmentDate, appointmentTime, recaptchaToken) {
     // Send appointment email using FormSubmit
-    fetch('https://formsubmit.co/mypcpclinic@gmail.com', {
+    fetch('https://formsubmit.co/ajax/mypcpclinic@gmail.com', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -334,31 +343,40 @@ function submitAppointmentForm(patientName, patientEmail, patientPhone, serviceL
             _captcha: recaptchaToken ? 'reCAPTCHA verified' : 'N/A'
         })
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
     .then(data => {
-        console.log('Appointment submitted successfully');
+        console.log('Appointment submitted successfully', data);
         
-        // Close appointment modal and show confirmation
-        closeAppointmentModal();
-        
-        // Update confirmation message for appointments
-        const confirmationContent = document.querySelector('.confirmation-content');
-        confirmationContent.innerHTML = `
-            <div class="confirmation-icon">📅</div>
-            <h2>Appointment Request Received!</h2>
-            <p>Your appointment request for <strong>${serviceLabel}</strong> on <strong>${appointmentDate}</strong> at <strong>${appointmentTime}</strong> has been received.</p>
-            <p>We'll contact you shortly to confirm your appointment.</p>
-            <button class="cta-button" onclick="closeConfirmationModal()">Close</button>
-        `;
-        
-        openConfirmationModal();
-        
-        // Reset form
-        document.getElementById('appointmentForm').reset();
+        if (data.success === 'true' || data.success === true) {
+            // Close appointment modal and show confirmation
+            closeAppointmentModal();
+            
+            // Update confirmation message for appointments
+            const confirmationContent = document.querySelector('.confirmation-content');
+            confirmationContent.innerHTML = `
+                <div class="confirmation-icon">📅</div>
+                <h2>Appointment Request Received!</h2>
+                <p>Your appointment request for <strong>${serviceLabel}</strong> on <strong>${appointmentDate}</strong> at <strong>${appointmentTime}</strong> has been received.</p>
+                <p>We'll contact you shortly to confirm your appointment.</p>
+                <button class="cta-button" onclick="closeConfirmationModal()">Close</button>
+            `;
+            
+            openConfirmationModal();
+            
+            // Reset form
+            document.getElementById('appointmentForm').reset();
+        } else {
+            alert(data.message || 'There was an error. Please call us at (786) 525-5664.');
+        }
     })
     .catch(error => {
         console.error('Error submitting appointment:', error);
-        alert('There was an error submitting your appointment. Please try again or call us directly.');
+        alert('There was an error submitting your appointment. Please call us at (786) 525-5664.');
     });
 }
 
