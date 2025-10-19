@@ -1191,9 +1191,10 @@ a:focus {
 .shape {
     position: absolute;
     border-radius: 50%;
-    opacity: 0.12;
+    opacity: 0.18;
     animation: float 12s infinite ease-in-out;
     pointer-events: none;
+    will-change: transform;
 }
 
 .shape-1 {
@@ -1625,7 +1626,7 @@ a:focus {
 /* Desktop-specific enhancements for floating shapes */
 @media (min-width: 1024px) {
     .shape {
-        opacity: 0.15;
+        opacity: 0.2;
     }
     
     .shape-1 {
@@ -1790,14 +1791,19 @@ a:focus {
 }
 
 /* Ensure all content is above floating shapes */
-.navbar,
+.navbar {
+    position: fixed;
+    z-index: 1000;
+}
+
 section,
 footer {
     position: relative;
-    z-index: 1;
+    z-index: 10;
+    background: transparent;
 }
 
-/* Keep shapes behind everything */
+/* Keep shapes behind everything but visible */
 .floating-shapes {
-    z-index: 0 !important;
+    z-index: 1 !important;
 }
