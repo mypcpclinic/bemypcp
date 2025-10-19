@@ -19,17 +19,27 @@ const translations = {
         'hero-tagline': 'Comprehensive Internal Medicine for Lifelong Wellness.',
         'hero-cta-appointment': 'Book Appointment',
         'hero-cta-contact': "We'd Love to Hear From You!",
-        'hero-highlight-1': 'Board-Certified',
-        'hero-highlight-2': 'Same-Day Appointments',
-        'hero-highlight-3': '20+ Years Experience',
+        'hero-highlight-1': 'Same-Day Appointments',
+        'hero-highlight-2': 'Telehealth Available',
+        'hero-highlight-3': 'English & Spanish',
         
         // Stats Card
-        'stats-welcome': 'Welcome to',
-        'stats-clinic': 'myPCP Internal Medicine',
+        'stats-welcome': 'Your Health, Our Priority',
+        'stats-clinic': 'Specialized in Internal Medicine',
         'stats-years': 'Years of Experience',
         'stats-patients': 'Happy Patients',
         'stats-rating': 'Patient Satisfaction',
-        'stats-cta': 'Your health journey starts here',
+        'stats-cta': 'Comprehensive care for adults with focus on prevention, diagnosis, and treatment of diseases.',
+        
+        // Welcome Features
+        'welcome-feature-1-title': 'Compassionate Care',
+        'welcome-feature-1-desc': 'Every patient is treated with empathy, respect, and genuine concern for their wellbeing.',
+        'welcome-feature-2-title': 'Personalized Approach',
+        'welcome-feature-2-desc': 'Your health journey is unique, and we tailor our care to meet your individual needs and goals.',
+        'welcome-feature-3-title': 'Modern Convenience',
+        'welcome-feature-3-desc': 'From telehealth visits to online scheduling, we make healthcare accessible and convenient for you.',
+        'welcome-feature-4-title': 'Trusted Expertise',
+        'welcome-feature-4-desc': 'Board-certified physicians with years of experience, staying current with the latest medical advances.',
         
         // Trust Section
         'trust-title': 'Trusted Healthcare You Can Rely On',
@@ -48,12 +58,12 @@ const translations = {
         'about-title': 'About Us',
         'about-intro': '"At myPCP, we believe internal medicine should be personal, comprehensive, and focused on your overall health."',
         'about-description': 'Our mission is to redefine the traditional clinic experience by combining modern technology, evidence-based medicine, and compassionate care.',
-        'about-value-1-title': 'Patient-Centered Care',
-        'about-value-1-desc': 'Your health goals and concerns are our top priority. We listen, understand, and create personalized treatment plans.',
-        'about-value-2-title': 'Evidence-Based Medicine',
-        'about-value-2-desc': 'Our approach is rooted in the latest medical research and best practices to ensure the highest quality of care.',
-        'about-value-3-title': 'Holistic Approach',
-        'about-value-3-desc': 'We address not just symptoms, but the whole person—physical, mental, and emotional health.',
+        'about-value-1-title': 'Compassion',
+        'about-value-1-desc': 'Delivering every service with empathy and understanding.',
+        'about-value-2-title': 'Trust',
+        'about-value-2-desc': 'Building lasting relationships through transparency and respect.',
+        'about-value-3-title': 'Innovation',
+        'about-value-3-desc': 'Integrating modern telemedicine and wellness treatments for holistic care.',
         
         // Services Section
         'services-title': 'Our Services',
@@ -70,8 +80,12 @@ const translations = {
         
         // Team Section
         'team-title': 'Meet Our Team',
-        'team-role': 'Internal Medicine Physician',
-        'team-bio': 'Dr. Rodriguez is a board-certified internal medicine physician with over 20 years of experience. She is passionate about providing personalized, compassionate care to help her patients achieve optimal health.',
+        'team-subtitle': 'Dedicated professionals who combine warmth with expertise.',
+        'team-role': 'Board-Certified Internal Medicine Specialist',
+        'team-bio': 'Dr. Melanio J. Rodriguez is a dedicated and compassionate board-certified internist with extensive experience in comprehensive adult healthcare. His practice philosophy centers on building lasting relationships with his patients through personalized, evidence-based medicine.',
+        'team-bio-2': 'With a commitment to preventive care and chronic disease management, Dr. Rodriguez takes the time to listen to each patient\'s concerns and develop individualized treatment plans. He believes in empowering patients with knowledge and working collaboratively to achieve optimal health outcomes.',
+        'team-bio-3': 'Dr. Rodriguez is fluent in both English and Spanish, allowing him to serve the diverse Miami community with cultural sensitivity and understanding. He stays current with the latest medical advances to provide his patients with cutting-edge, compassionate care.',
+        'team-quote': '"My goal is to bring back the human touch in medicine — accessible, compassionate, and modern."',
         
         // FAQ Section
         'faq-title': 'Frequently Asked Questions',
@@ -134,17 +148,27 @@ const translations = {
         'hero-tagline': 'Medicina Interna Integral para el Bienestar de Toda la Vida.',
         'hero-cta-appointment': 'Reservar Cita',
         'hero-cta-contact': '¡Nos Encantaría Escucharte!',
-        'hero-highlight-1': 'Certificado',
-        'hero-highlight-2': 'Citas el Mismo Día',
-        'hero-highlight-3': '+20 Años de Experiencia',
+        'hero-highlight-1': 'Citas el Mismo Día',
+        'hero-highlight-2': 'Telesalud Disponible',
+        'hero-highlight-3': 'Inglés y Español',
         
         // Tarjeta de Estadísticas
-        'stats-welcome': 'Bienvenido a',
-        'stats-clinic': 'myPCP Medicina Interna',
+        'stats-welcome': 'Su Salud, Nuestra Prioridad',
+        'stats-clinic': 'Especializado en Medicina Interna',
         'stats-years': 'Años de Experiencia',
         'stats-patients': 'Pacientes Satisfechos',
         'stats-rating': 'Satisfacción del Paciente',
-        'stats-cta': 'Su viaje de salud comienza aquí',
+        'stats-cta': 'Atención integral para adultos con enfoque en prevención, diagnóstico y tratamiento de enfermedades.',
+        
+        // Características de Bienvenida
+        'welcome-feature-1-title': 'Atención Compasiva',
+        'welcome-feature-1-desc': 'Cada paciente es tratado con empatía, respeto y genuina preocupación por su bienestar.',
+        'welcome-feature-2-title': 'Enfoque Personalizado',
+        'welcome-feature-2-desc': 'Su viaje de salud es único, y adaptamos nuestra atención para satisfacer sus necesidades y objetivos individuales.',
+        'welcome-feature-3-title': 'Conveniencia Moderna',
+        'welcome-feature-3-desc': 'Desde visitas de telesalud hasta programación en línea, hacemos que la atención médica sea accesible y conveniente para usted.',
+        'welcome-feature-4-title': 'Experiencia Confiable',
+        'welcome-feature-4-desc': 'Médicos certificados con años de experiencia, manteniéndose actualizados con los últimos avances médicos.',
         
         // Sección de Confianza
         'trust-title': 'Atención Médica Confiable en la que Puede Confiar',
@@ -156,19 +180,19 @@ const translations = {
         'trust-badge-3-desc': 'Su Privacidad Protegida',
         'trust-badge-4-title': 'Seguro Aceptado',
         'trust-badge-4-desc': 'La Mayoría de los Planes',
-        'trust-testimonial': '"La Dra. Rodríguez se toma el tiempo para escuchar y brinda atención compasiva y exhaustiva. Finalmente encontré una doctora que me trata como persona, no solo como paciente."',
+        'trust-testimonial': '"El Dr. Rodríguez se toma el tiempo para escuchar y brinda atención compasiva y exhaustiva. Finalmente encontré un doctor que me trata como persona, no solo como paciente."',
         'trust-author': '— Paciente Verificado',
         
         // Sección Nosotros
         'about-title': 'Nosotros',
         'about-intro': '"En myPCP, creemos que la medicina interna debe ser personal, integral y enfocada en su salud general."',
         'about-description': 'Nuestra misión es redefinir la experiencia clínica tradicional combinando tecnología moderna, medicina basada en evidencia y atención compasiva.',
-        'about-value-1-title': 'Atención Centrada en el Paciente',
-        'about-value-1-desc': 'Sus objetivos y preocupaciones de salud son nuestra máxima prioridad. Escuchamos, entendemos y creamos planes de tratamiento personalizados.',
-        'about-value-2-title': 'Medicina Basada en Evidencia',
-        'about-value-2-desc': 'Nuestro enfoque se basa en la investigación médica más reciente y las mejores prácticas para garantizar la más alta calidad de atención.',
-        'about-value-3-title': 'Enfoque Holístico',
-        'about-value-3-desc': 'Abordamos no solo los síntomas, sino a la persona completa: salud física, mental y emocional.',
+        'about-value-1-title': 'Compasión',
+        'about-value-1-desc': 'Entregando cada servicio con empatía y comprensión.',
+        'about-value-2-title': 'Confianza',
+        'about-value-2-desc': 'Construyendo relaciones duraderas a través de la transparencia y el respeto.',
+        'about-value-3-title': 'Innovación',
+        'about-value-3-desc': 'Integrando telemedicina moderna y tratamientos de bienestar para una atención holística.',
         
         // Sección de Servicios
         'services-title': 'Nuestros Servicios',
@@ -185,8 +209,12 @@ const translations = {
         
         // Sección del Equipo
         'team-title': 'Conozca a Nuestro Equipo',
-        'team-role': 'Médico de Medicina Interna',
-        'team-bio': 'La Dra. Rodríguez es una médica de medicina interna certificada con más de 20 años de experiencia. Le apasiona brindar atención personalizada y compasiva para ayudar a sus pacientes a alcanzar una salud óptima.',
+        'team-subtitle': 'Profesionales dedicados que combinan calidez con experiencia.',
+        'team-role': 'Especialista Certificado en Medicina Interna',
+        'team-bio': 'El Dr. Melanio J. Rodríguez es un internista certificado dedicado y compasivo con amplia experiencia en atención integral para adultos. Su filosofía de práctica se centra en construir relaciones duraderas con sus pacientes a través de medicina personalizada y basada en evidencia.',
+        'team-bio-2': 'Con un compromiso con la atención preventiva y el manejo de enfermedades crónicas, el Dr. Rodríguez se toma el tiempo para escuchar las preocupaciones de cada paciente y desarrollar planes de tratamiento individualizados. Cree en empoderar a los pacientes con conocimiento y trabajar colaborativamente para lograr resultados de salud óptimos.',
+        'team-bio-3': 'El Dr. Rodríguez es fluido tanto en inglés como en español, lo que le permite servir a la diversa comunidad de Miami con sensibilidad cultural y comprensión. Se mantiene actualizado con los últimos avances médicos para brindar a sus pacientes atención compasiva y de vanguardia.',
+        'team-quote': '"Mi objetivo es devolver el toque humano a la medicina: accesible, compasiva y moderna."',
         
         // Sección de Preguntas
         'faq-title': 'Preguntas Frecuentes',
