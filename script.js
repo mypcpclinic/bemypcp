@@ -197,8 +197,8 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 });
 
 function submitContactForm(name, email, message, recaptchaToken) {
-    // Send email using FormSubmit
-    fetch('https://formsubmit.co/ajax/mypcpclinic@gmail.com', {
+    // Send email using Formspree
+    fetch('https://formspree.io/f/xdkwjklg', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -208,8 +208,8 @@ function submitContactForm(name, email, message, recaptchaToken) {
             name: name,
             email: email,
             message: message,
-            _subject: 'New Contact Form Message from myPCP Website',
-            _template: 'table',
+            subject: 'New Contact Form Message from myPCP Website',
+            _replyto: email,
             _captcha: recaptchaToken ? 'reCAPTCHA verified' : 'N/A'
         })
     })
@@ -221,16 +221,16 @@ function submitContactForm(name, email, message, recaptchaToken) {
     })
     .then(data => {
         console.log('Contact form submitted successfully', data);
-        if (data.success === 'true' || data.success === true) {
+        if (data.ok || data.success) {
             openConfirmationModal();
             document.getElementById('contactForm').reset();
         } else {
-            alert(data.message || 'There was an error. Please call us at (786) 525-5664.');
+            alert('There was an error. Please call us at (786) 525-5664.');
         }
     })
     .catch(error => {
         console.error('Error submitting form:', error);
-        alert('There was an error sending your message. Please call us at (786) 525-5664 or email directly.');
+        alert('There was an error sending your message. Please call us at (786) 525-5664.');
     });
 }
 
@@ -324,22 +324,22 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
 });
 
 function submitAppointmentForm(patientName, patientEmail, patientPhone, serviceLabel, appointmentDate, appointmentTime, recaptchaToken) {
-    // Send appointment email using FormSubmit
-    fetch('https://formsubmit.co/ajax/mypcpclinic@gmail.com', {
+    // Send appointment email using Formspree
+    fetch('https://formspree.io/f/xdkwjklg', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
         },
         body: JSON.stringify({
-            'Patient Name': patientName,
-            'Patient Email': patientEmail,
-            'Patient Phone': patientPhone,
-            'Service Type': serviceLabel,
-            'Appointment Date': appointmentDate,
-            'Appointment Time': appointmentTime,
-            _subject: 'New Appointment Request from myPCP Website',
-            _template: 'table',
+            name: patientName,
+            email: patientEmail,
+            phone: patientPhone,
+            serviceType: serviceLabel,
+            appointmentDate: appointmentDate,
+            appointmentTime: appointmentTime,
+            subject: 'New Appointment Request from myPCP Website',
+            _replyto: patientEmail,
             _captcha: recaptchaToken ? 'reCAPTCHA verified' : 'N/A'
         })
     })
@@ -352,7 +352,7 @@ function submitAppointmentForm(patientName, patientEmail, patientPhone, serviceL
     .then(data => {
         console.log('Appointment submitted successfully', data);
         
-        if (data.success === 'true' || data.success === true) {
+        if (data.ok || data.success) {
             // Close appointment modal and show confirmation
             closeAppointmentModal();
             
@@ -371,7 +371,7 @@ function submitAppointmentForm(patientName, patientEmail, patientPhone, serviceL
             // Reset form
             document.getElementById('appointmentForm').reset();
         } else {
-            alert(data.message || 'There was an error. Please call us at (786) 525-5664.');
+            alert('There was an error. Please call us at (786) 525-5664.');
         }
     })
     .catch(error => {
