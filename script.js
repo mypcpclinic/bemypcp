@@ -32,7 +32,7 @@ const translations = {
         'stats-cta': 'Your health journey starts here',
         
         // Trust Section
-        'trust-title': 'Trusted by Miami Families',
+        'trust-title': 'Trusted Healthcare You Can Rely On',
         'trust-badge-1-title': 'Board Certified',
         'trust-badge-1-desc': 'American Board of Internal Medicine',
         'trust-badge-2-title': '5-Star Rated',
@@ -41,8 +41,8 @@ const translations = {
         'trust-badge-3-desc': 'Your Privacy Protected',
         'trust-badge-4-title': 'Insurance Accepted',
         'trust-badge-4-desc': 'Most Major Plans',
-        'trust-testimonial': '"Dr. Rodriguez is amazing! She takes the time to listen and really cares about her patients. The best internal medicine doctor I\'ve ever had."',
-        'trust-author': 'Verified Patient',
+        'trust-testimonial': '"Dr. Rodriguez takes the time to listen and provides thorough, compassionate care. I finally found a doctor who treats me as a person, not just a patient."',
+        'trust-author': '— Verified Patient',
         
         // About Section
         'about-title': 'About Us',
@@ -57,18 +57,16 @@ const translations = {
         
         // Services Section
         'services-title': 'Our Services',
-        'service-1-title': 'Preventive Care',
-        'service-1-desc': 'Regular check-ups, health screenings, and vaccinations to keep you healthy.',
-        'service-2-title': 'Chronic Disease Management',
-        'service-2-desc': 'Expert care for diabetes, hypertension, heart disease, and more.',
-        'service-3-title': 'Internal Medicine',
-        'service-3-desc': 'Comprehensive diagnosis and treatment of adult diseases and conditions.',
-        'service-4-title': 'Wellness & Lifestyle',
-        'service-4-desc': 'Personalized guidance on nutrition, exercise, and healthy living.',
-        'service-5-title': 'Acute Illness Care',
-        'service-5-desc': 'Prompt treatment for infections, injuries, and sudden health issues.',
-        'service-6-title': 'Health Monitoring',
-        'service-6-desc': 'Regular monitoring and follow-up care to track your health progress.',
+        'service-1-title': 'Preventive Medicine',
+        'service-1-desc': 'Comprehensive check-ups, annual physicals, and lifestyle counseling focused on keeping you healthy — not just treating illness.',
+        'service-2-title': 'Telehealth',
+        'service-2-desc': 'See your physician from anywhere.',
+        'service-3-title': 'Med Spa',
+        'service-3-desc': 'Where wellness meets aesthetics.',
+        'service-4-title': 'Clinical Trials',
+        'service-4-desc': 'Be part of medical innovation.',
+        'service-5-title': 'Infusions',
+        'service-5-desc': 'Restorative IV therapy sessions for hydration, vitamin repletion, immune support, and fatigue recovery — all in a calm, spa-inspired environment.',
         
         // Team Section
         'team-title': 'Meet Our Team',
@@ -149,7 +147,7 @@ const translations = {
         'stats-cta': 'Su viaje de salud comienza aquí',
         
         // Sección de Confianza
-        'trust-title': 'Confiado por Familias de Miami',
+        'trust-title': 'Atención Médica Confiable en la que Puede Confiar',
         'trust-badge-1-title': 'Certificado',
         'trust-badge-1-desc': 'Junta Americana de Medicina Interna',
         'trust-badge-2-title': 'Calificación 5 Estrellas',
@@ -158,8 +156,8 @@ const translations = {
         'trust-badge-3-desc': 'Su Privacidad Protegida',
         'trust-badge-4-title': 'Seguro Aceptado',
         'trust-badge-4-desc': 'La Mayoría de los Planes',
-        'trust-testimonial': '"¡La Dra. Rodríguez es increíble! Se toma el tiempo para escuchar y realmente se preocupa por sus pacientes. La mejor doctora de medicina interna que he tenido."',
-        'trust-author': 'Paciente Verificado',
+        'trust-testimonial': '"La Dra. Rodríguez se toma el tiempo para escuchar y brinda atención compasiva y exhaustiva. Finalmente encontré una doctora que me trata como persona, no solo como paciente."',
+        'trust-author': '— Paciente Verificado',
         
         // Sección Nosotros
         'about-title': 'Nosotros',
@@ -174,18 +172,16 @@ const translations = {
         
         // Sección de Servicios
         'services-title': 'Nuestros Servicios',
-        'service-1-title': 'Cuidado Preventivo',
-        'service-1-desc': 'Chequeos regulares, exámenes de salud y vacunas para mantenerlo saludable.',
-        'service-2-title': 'Manejo de Enfermedades Crónicas',
-        'service-2-desc': 'Atención experta para diabetes, hipertensión, enfermedades del corazón y más.',
-        'service-3-title': 'Medicina Interna',
-        'service-3-desc': 'Diagnóstico y tratamiento integral de enfermedades y condiciones de adultos.',
-        'service-4-title': 'Bienestar y Estilo de Vida',
-        'service-4-desc': 'Orientación personalizada sobre nutrición, ejercicio y vida saludable.',
-        'service-5-title': 'Atención de Enfermedades Agudas',
-        'service-5-desc': 'Tratamiento rápido para infecciones, lesiones y problemas de salud repentinos.',
-        'service-6-title': 'Monitoreo de Salud',
-        'service-6-desc': 'Monitoreo regular y atención de seguimiento para rastrear su progreso de salud.',
+        'service-1-title': 'Medicina Preventiva',
+        'service-1-desc': 'Chequeos completos, exámenes físicos anuales y asesoramiento sobre el estilo de vida enfocado en mantenerlo saludable, no solo en tratar enfermedades.',
+        'service-2-title': 'Telesalud',
+        'service-2-desc': 'Vea a su médico desde cualquier lugar.',
+        'service-3-title': 'Med Spa',
+        'service-3-desc': 'Donde el bienestar se encuentra con la estética.',
+        'service-4-title': 'Ensayos Clínicos',
+        'service-4-desc': 'Sea parte de la innovación médica.',
+        'service-5-title': 'Infusiones',
+        'service-5-desc': 'Sesiones restaurativas de terapia intravenosa para hidratación, reposición de vitaminas, apoyo inmunológico y recuperación de la fatiga, todo en un ambiente tranquilo y tipo spa.',
         
         // Sección del Equipo
         'team-title': 'Conozca a Nuestro Equipo',
