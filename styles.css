@@ -1829,22 +1829,6 @@ a:focus {
     overflow: hidden;
 }
 
-/* Language Toggle Button */
-.lang-toggle {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.5rem 1rem;
-    background: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    border-radius: 8px;
-    cursor: pointer;
-    font-family: var(--font-heading);
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-}
 
 .lang-toggle:hover {
     background: var(--primary-color);
