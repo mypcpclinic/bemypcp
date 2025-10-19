@@ -187,20 +187,6 @@ function openAppointmentModal() {
     });
 }
 
-function closeAppointmentModal() {
-    const modal = document.getElementById('appointmentModal');
-    if (modal) {
-        modal.style.display = 'none';
-    }
-}
-
-// Close modal when clicking outside
-window.addEventListener('click', function(event) {
-    const modal = document.getElementById('appointmentModal');
-    if (event.target === modal) {
-        closeAppointmentModal();
-    }
-});
 
 // FAQ Toggle functionality
 document.querySelectorAll('.faq-question').forEach(question => {
