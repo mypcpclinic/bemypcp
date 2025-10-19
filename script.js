@@ -1,3 +1,291 @@
+// ===================================
+// LANGUAGE TRANSLATION SYSTEM
+// ===================================
+
+// Translations object
+const translations = {
+    en: {
+        // Navigation
+        'nav-home': 'Home',
+        'nav-about': 'About',
+        'nav-services': 'Services',
+        'nav-team': 'Team',
+        'nav-faq': 'FAQ',
+        'nav-contact': 'Contact',
+        'nav-appointment': 'Make Appointment',
+        
+        // Hero Section
+        'hero-title': 'Your Partner in Health, Every Step of the Way.',
+        'hero-tagline': 'Comprehensive Internal Medicine for Lifelong Wellness.',
+        'hero-cta-appointment': 'Book Appointment',
+        'hero-cta-contact': "We'd Love to Hear From You!",
+        'hero-highlight-1': 'Board-Certified',
+        'hero-highlight-2': 'Same-Day Appointments',
+        'hero-highlight-3': '20+ Years Experience',
+        
+        // Stats Card
+        'stats-welcome': 'Welcome to',
+        'stats-clinic': 'myPCP Internal Medicine',
+        'stats-years': 'Years of Experience',
+        'stats-patients': 'Happy Patients',
+        'stats-rating': 'Patient Satisfaction',
+        'stats-cta': 'Your health journey starts here',
+        
+        // Trust Section
+        'trust-title': 'Trusted by Miami Families',
+        'trust-badge-1-title': 'Board Certified',
+        'trust-badge-1-desc': 'American Board of Internal Medicine',
+        'trust-badge-2-title': '5-Star Rated',
+        'trust-badge-2-desc': 'Patient Satisfaction',
+        'trust-badge-3-title': 'HIPAA Compliant',
+        'trust-badge-3-desc': 'Your Privacy Protected',
+        'trust-badge-4-title': 'Insurance Accepted',
+        'trust-badge-4-desc': 'Most Major Plans',
+        'trust-testimonial': '"Dr. Rodriguez is amazing! She takes the time to listen and really cares about her patients. The best internal medicine doctor I\'ve ever had."',
+        'trust-author': 'Verified Patient',
+        
+        // About Section
+        'about-title': 'About Us',
+        'about-intro': '"At myPCP, we believe internal medicine should be personal, comprehensive, and focused on your overall health."',
+        'about-description': 'Our mission is to redefine the traditional clinic experience by combining modern technology, evidence-based medicine, and compassionate care.',
+        'about-value-1-title': 'Patient-Centered Care',
+        'about-value-1-desc': 'Your health goals and concerns are our top priority. We listen, understand, and create personalized treatment plans.',
+        'about-value-2-title': 'Evidence-Based Medicine',
+        'about-value-2-desc': 'Our approach is rooted in the latest medical research and best practices to ensure the highest quality of care.',
+        'about-value-3-title': 'Holistic Approach',
+        'about-value-3-desc': 'We address not just symptoms, but the whole person—physical, mental, and emotional health.',
+        
+        // Services Section
+        'services-title': 'Our Services',
+        'service-1-title': 'Preventive Care',
+        'service-1-desc': 'Regular check-ups, health screenings, and vaccinations to keep you healthy.',
+        'service-2-title': 'Chronic Disease Management',
+        'service-2-desc': 'Expert care for diabetes, hypertension, heart disease, and more.',
+        'service-3-title': 'Internal Medicine',
+        'service-3-desc': 'Comprehensive diagnosis and treatment of adult diseases and conditions.',
+        'service-4-title': 'Wellness & Lifestyle',
+        'service-4-desc': 'Personalized guidance on nutrition, exercise, and healthy living.',
+        'service-5-title': 'Acute Illness Care',
+        'service-5-desc': 'Prompt treatment for infections, injuries, and sudden health issues.',
+        'service-6-title': 'Health Monitoring',
+        'service-6-desc': 'Regular monitoring and follow-up care to track your health progress.',
+        
+        // Team Section
+        'team-title': 'Meet Our Team',
+        'team-role': 'Internal Medicine Physician',
+        'team-bio': 'Dr. Rodriguez is a board-certified internal medicine physician with over 20 years of experience. She is passionate about providing personalized, compassionate care to help her patients achieve optimal health.',
+        
+        // FAQ Section
+        'faq-title': 'Frequently Asked Questions',
+        'faq-q1': 'What insurance plans do you accept?',
+        'faq-a1': 'We accept most major insurance plans, including Medicare and Medicaid. Please contact our office to verify your specific plan.',
+        'faq-q2': 'Do you offer same-day appointments?',
+        'faq-a2': 'Yes, we do our best to accommodate same-day appointments for urgent concerns. Please call our office as early as possible.',
+        'faq-q3': 'What should I bring to my first appointment?',
+        'faq-a3': 'Please bring your insurance card, a valid ID, a list of current medications, and any relevant medical records or test results.',
+        'faq-q4': 'Do you offer telemedicine visits?',
+        'faq-a4': 'Yes, we offer telemedicine appointments for certain types of visits. Contact us to see if your concern is appropriate for a virtual visit.',
+        'faq-q5': 'What are your office hours?',
+        'faq-a5': 'Our office is open Monday through Friday, 9 AM to 5 PM. We are closed on weekends and major holidays.',
+        
+        // Contact Section
+        'contact-title': 'Get in Touch',
+        'contact-subtitle': 'We\'re here to help. Reach out to us today.',
+        'contact-info-title': 'Contact Information',
+        'contact-address-label': 'Address',
+        'contact-address': '123 Healthcare Blvd, Miami, FL 33101',
+        'contact-phone-label': 'Phone',
+        'contact-email-label': 'Email',
+        'contact-hours-label': 'Hours',
+        'contact-hours': 'Mon-Fri: 9:00 AM - 5:00 PM',
+        'contact-form-title': 'Send Us a Message',
+        'contact-form-name': 'Your Name',
+        'contact-form-email': 'Your Email',
+        'contact-form-message': 'Your Message',
+        'contact-form-submit': 'Send Message',
+        'contact-form-warning': '⚠️ Do not include any sensitive medical or personal information in this form.',
+        
+        // Footer
+        'footer-tagline': 'Expert Internal Medicine Care in Miami',
+        'footer-quick-links': 'Quick Links',
+        'footer-legal': 'Legal',
+        'footer-privacy': 'Privacy Policy',
+        'footer-hipaa': 'HIPAA Notice',
+        'footer-recaptcha': 'This site is protected by reCAPTCHA and the Google',
+        'footer-privacy-policy': 'Privacy Policy',
+        'footer-and': 'and',
+        'footer-terms': 'Terms of Service',
+        'footer-apply': 'apply.',
+        'footer-copyright': '© 2025 myPCP. All rights reserved.',
+        
+        // Modal
+        'modal-close': 'Close'
+    },
+    es: {
+        // Navegación
+        'nav-home': 'Inicio',
+        'nav-about': 'Nosotros',
+        'nav-services': 'Servicios',
+        'nav-team': 'Equipo',
+        'nav-faq': 'Preguntas',
+        'nav-contact': 'Contacto',
+        'nav-appointment': 'Hacer Cita',
+        
+        // Sección Hero
+        'hero-title': 'Su Compañero en Salud, en Cada Paso del Camino.',
+        'hero-tagline': 'Medicina Interna Integral para el Bienestar de Toda la Vida.',
+        'hero-cta-appointment': 'Reservar Cita',
+        'hero-cta-contact': '¡Nos Encantaría Escucharte!',
+        'hero-highlight-1': 'Certificado',
+        'hero-highlight-2': 'Citas el Mismo Día',
+        'hero-highlight-3': '+20 Años de Experiencia',
+        
+        // Tarjeta de Estadísticas
+        'stats-welcome': 'Bienvenido a',
+        'stats-clinic': 'myPCP Medicina Interna',
+        'stats-years': 'Años de Experiencia',
+        'stats-patients': 'Pacientes Satisfechos',
+        'stats-rating': 'Satisfacción del Paciente',
+        'stats-cta': 'Su viaje de salud comienza aquí',
+        
+        // Sección de Confianza
+        'trust-title': 'Confiado por Familias de Miami',
+        'trust-badge-1-title': 'Certificado',
+        'trust-badge-1-desc': 'Junta Americana de Medicina Interna',
+        'trust-badge-2-title': 'Calificación 5 Estrellas',
+        'trust-badge-2-desc': 'Satisfacción del Paciente',
+        'trust-badge-3-title': 'Cumple con HIPAA',
+        'trust-badge-3-desc': 'Su Privacidad Protegida',
+        'trust-badge-4-title': 'Seguro Aceptado',
+        'trust-badge-4-desc': 'La Mayoría de los Planes',
+        'trust-testimonial': '"¡La Dra. Rodríguez es increíble! Se toma el tiempo para escuchar y realmente se preocupa por sus pacientes. La mejor doctora de medicina interna que he tenido."',
+        'trust-author': 'Paciente Verificado',
+        
+        // Sección Nosotros
+        'about-title': 'Nosotros',
+        'about-intro': '"En myPCP, creemos que la medicina interna debe ser personal, integral y enfocada en su salud general."',
+        'about-description': 'Nuestra misión es redefinir la experiencia clínica tradicional combinando tecnología moderna, medicina basada en evidencia y atención compasiva.',
+        'about-value-1-title': 'Atención Centrada en el Paciente',
+        'about-value-1-desc': 'Sus objetivos y preocupaciones de salud son nuestra máxima prioridad. Escuchamos, entendemos y creamos planes de tratamiento personalizados.',
+        'about-value-2-title': 'Medicina Basada en Evidencia',
+        'about-value-2-desc': 'Nuestro enfoque se basa en la investigación médica más reciente y las mejores prácticas para garantizar la más alta calidad de atención.',
+        'about-value-3-title': 'Enfoque Holístico',
+        'about-value-3-desc': 'Abordamos no solo los síntomas, sino a la persona completa: salud física, mental y emocional.',
+        
+        // Sección de Servicios
+        'services-title': 'Nuestros Servicios',
+        'service-1-title': 'Cuidado Preventivo',
+        'service-1-desc': 'Chequeos regulares, exámenes de salud y vacunas para mantenerlo saludable.',
+        'service-2-title': 'Manejo de Enfermedades Crónicas',
+        'service-2-desc': 'Atención experta para diabetes, hipertensión, enfermedades del corazón y más.',
+        'service-3-title': 'Medicina Interna',
+        'service-3-desc': 'Diagnóstico y tratamiento integral de enfermedades y condiciones de adultos.',
+        'service-4-title': 'Bienestar y Estilo de Vida',
+        'service-4-desc': 'Orientación personalizada sobre nutrición, ejercicio y vida saludable.',
+        'service-5-title': 'Atención de Enfermedades Agudas',
+        'service-5-desc': 'Tratamiento rápido para infecciones, lesiones y problemas de salud repentinos.',
+        'service-6-title': 'Monitoreo de Salud',
+        'service-6-desc': 'Monitoreo regular y atención de seguimiento para rastrear su progreso de salud.',
+        
+        // Sección del Equipo
+        'team-title': 'Conozca a Nuestro Equipo',
+        'team-role': 'Médico de Medicina Interna',
+        'team-bio': 'La Dra. Rodríguez es una médica de medicina interna certificada con más de 20 años de experiencia. Le apasiona brindar atención personalizada y compasiva para ayudar a sus pacientes a alcanzar una salud óptima.',
+        
+        // Sección de Preguntas
+        'faq-title': 'Preguntas Frecuentes',
+        'faq-q1': '¿Qué planes de seguro aceptan?',
+        'faq-a1': 'Aceptamos la mayoría de los principales planes de seguro, incluidos Medicare y Medicaid. Comuníquese con nuestra oficina para verificar su plan específico.',
+        'faq-q2': '¿Ofrecen citas el mismo día?',
+        'faq-a2': 'Sí, hacemos nuestro mejor esfuerzo para acomodar citas el mismo día para preocupaciones urgentes. Llame a nuestra oficina lo antes posible.',
+        'faq-q3': '¿Qué debo traer a mi primera cita?',
+        'faq-a3': 'Traiga su tarjeta de seguro, una identificación válida, una lista de medicamentos actuales y cualquier registro médico o resultado de pruebas relevante.',
+        'faq-q4': '¿Ofrecen visitas de telemedicina?',
+        'faq-a4': 'Sí, ofrecemos citas de telemedicina para ciertos tipos de visitas. Contáctenos para ver si su preocupación es apropiada para una visita virtual.',
+        'faq-q5': '¿Cuáles son sus horarios de oficina?',
+        'faq-a5': 'Nuestra oficina está abierta de lunes a viernes, de 9 AM a 5 PM. Estamos cerrados los fines de semana y días festivos.',
+        
+        // Sección de Contacto
+        'contact-title': 'Contáctenos',
+        'contact-subtitle': 'Estamos aquí para ayudar. Comuníquese con nosotros hoy.',
+        'contact-info-title': 'Información de Contacto',
+        'contact-address-label': 'Dirección',
+        'contact-address': '123 Healthcare Blvd, Miami, FL 33101',
+        'contact-phone-label': 'Teléfono',
+        'contact-email-label': 'Correo',
+        'contact-hours-label': 'Horario',
+        'contact-hours': 'Lun-Vie: 9:00 AM - 5:00 PM',
+        'contact-form-title': 'Envíenos un Mensaje',
+        'contact-form-name': 'Su Nombre',
+        'contact-form-email': 'Su Correo',
+        'contact-form-message': 'Su Mensaje',
+        'contact-form-submit': 'Enviar Mensaje',
+        'contact-form-warning': '⚠️ No incluya información médica o personal sensible en este formulario.',
+        
+        // Pie de Página
+        'footer-tagline': 'Atención Experta en Medicina Interna en Miami',
+        'footer-quick-links': 'Enlaces Rápidos',
+        'footer-legal': 'Legal',
+        'footer-privacy': 'Política de Privacidad',
+        'footer-hipaa': 'Aviso HIPAA',
+        'footer-recaptcha': 'Este sitio está protegido por reCAPTCHA y Google',
+        'footer-privacy-policy': 'Política de Privacidad',
+        'footer-and': 'y',
+        'footer-terms': 'Términos de Servicio',
+        'footer-apply': 'aplican.',
+        'footer-copyright': '© 2025 myPCP. Todos los derechos reservados.',
+        
+        // Modal
+        'modal-close': 'Cerrar'
+    }
+};
+
+// Current language state
+let currentLang = localStorage.getItem('language') || 'en';
+
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', function() {
+    setLanguage(currentLang);
+    updateLangButtonText();
+});
+
+// Toggle language function
+function toggleLanguage() {
+    currentLang = currentLang === 'en' ? 'es' : 'en';
+    setLanguage(currentLang);
+    localStorage.setItem('language', currentLang);
+    updateLangButtonText();
+}
+
+// Update language button text
+function updateLangButtonText() {
+    const langText = document.getElementById('langText');
+    if (langText) {
+        langText.textContent = currentLang === 'en' ? 'ES' : 'EN';
+    }
+}
+
+// Set language for all elements
+function setLanguage(lang) {
+    // Update all elements with data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            // Check if it's an input/textarea placeholder
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = translations[lang][key];
+            } else if (element.tagName === 'BUTTON' || element.tagName === 'A') {
+                element.textContent = translations[lang][key];
+            } else {
+                element.innerHTML = translations[lang][key];
+            }
+        }
+    });
+    
+    // Update HTML lang attribute
+    document.documentElement.lang = lang;
+}
+
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');

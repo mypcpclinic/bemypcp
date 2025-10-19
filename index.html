@@ -26,15 +26,21 @@
                 </div>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" data-i18n="nav-home">Home</a></li>
+                <li><a href="#about" data-i18n="nav-about">About</a></li>
+                <li><a href="#services" data-i18n="nav-services">Services</a></li>
+                <li><a href="#team" data-i18n="nav-team">Team</a></li>
+                <li><a href="#faq" data-i18n="nav-faq">FAQ</a></li>
+                <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
             </ul>
             <div class="nav-actions">
-                <button class="appointment-btn" onclick="openAppointmentModal()">Make Appointment</button>
+                <button class="lang-toggle" id="langToggle" onclick="toggleLanguage()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/>
+                    </svg>
+                    <span id="langText">ES</span>
+                </button>
+                <button class="appointment-btn" onclick="openAppointmentModal()" data-i18n="nav-appointment">Make Appointment</button>
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -64,8 +70,8 @@
                         <div class="hero-logo-container animate-fade-in">
                             <img src="mypcp-logo.png" alt="myPCP Logo" class="hero-logo-image">
                         </div>
-                        <h1 class="hero-main-title animate-fade-in-up">Your Partner in Health, Every Step of the Way.</h1>
-                        <p class="hero-tagline animate-fade-in-up">Comprehensive Internal Medicine for Lifelong Wellness.</p>
+                        <h1 class="hero-main-title animate-fade-in-up" data-i18n="hero-title">Your Partner in Health, Every Step of the Way.</h1>
+                        <p class="hero-tagline animate-fade-in-up" data-i18n="hero-tagline">Comprehensive Internal Medicine for Lifelong Wellness.</p>
                     </div>
                     
                     <div class="hero-cta animate-fade-in-up">
@@ -270,9 +276,9 @@
         </div>
         <div class="container">
             <div class="about-content">
-                <h2 class="section-title">About Us</h2>
-                <p class="about-intro">"At myPCP, we believe internal medicine should be personal, comprehensive, and focused on your overall health."</p>
-                <p class="about-description">Our mission is to redefine the traditional clinic experience by combining modern technology, evidence-based medicine, and compassionate care.</p>
+                <h2 class="section-title" data-i18n="about-title">About Us</h2>
+                <p class="about-intro" data-i18n="about-intro">"At myPCP, we believe internal medicine should be personal, comprehensive, and focused on your overall health."</p>
+                <p class="about-description" data-i18n="about-description">Our mission is to redefine the traditional clinic experience by combining modern technology, evidence-based medicine, and compassionate care.</p>
                 
                 <div class="values-grid">
                 <div class="value-card">
@@ -316,7 +322,7 @@
             <div class="shape shape-6"></div>
         </div>
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
+            <h2 class="section-title" data-i18n="services-title">Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
@@ -390,7 +396,7 @@
     <!-- Our Team Section -->
     <section id="team" class="team">
         <div class="container">
-            <h2 class="section-title">Our Team</h2>
+            <h2 class="section-title" data-i18n="team-title">Our Team</h2>
             <p class="team-subtitle">Dedicated professionals who combine warmth with expertise.</p>
             
             <div class="doctor-section">
@@ -498,7 +504,7 @@
             <div class="shape shape-7"></div>
         </div>
         <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
+            <h2 class="section-title" data-i18n="faq-title">Frequently Asked Questions</h2>
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question">
