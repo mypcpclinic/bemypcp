@@ -1176,26 +1176,22 @@ a:focus {
     overflow: hidden;
 }
 
-/* Animated Background Shapes - Site-wide */
-.floating-shapes {
-    position: fixed;
+/* Animated Background Shapes */
+.hero-shapes {
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     overflow: hidden;
     z-index: 0;
-    pointer-events: none;
 }
 
 .shape {
     position: absolute;
     border-radius: 50%;
-    opacity: 0.35;
+    opacity: 0.25;
     animation: float 12s infinite ease-in-out;
-    pointer-events: none;
-    will-change: transform;
-    filter: blur(2px);
 }
 
 .shape-1 {
@@ -1627,29 +1623,29 @@ a:focus {
 /* Desktop-specific enhancements for floating shapes */
 @media (min-width: 1024px) {
     .shape {
-        opacity: 0.4;
+        opacity: 0.3;
     }
     
     .shape-1 {
-        width: 600px;
-        height: 600px;
+        width: 500px;
+        height: 500px;
     }
     
     .shape-2 {
-        width: 550px;
-        height: 550px;
+        width: 450px;
+        height: 450px;
     }
     
     .shape-3 {
-        width: 450px;
-        height: 450px;
+        width: 350px;
+        height: 350px;
     }
 }
 
 /* Mobile adjustments for shapes */
 @media (max-width: 768px) {
     .shape {
-        opacity: 0.2;
+        opacity: 0.15;
     }
     
     .shape-4, .shape-5 {
@@ -1796,20 +1792,8 @@ a:focus {
     }
 }
 
-/* Ensure all content is above floating shapes */
-.navbar {
-    position: fixed;
-    z-index: 1000;
-}
-
-section,
-footer {
+/* Keep hero content above shapes */
+.hero-container {
     position: relative;
-    z-index: 10;
-    background: transparent;
-}
-
-/* Keep shapes behind everything but visible */
-.floating-shapes {
-    z-index: 1 !important;
+    z-index: 1;
 }
