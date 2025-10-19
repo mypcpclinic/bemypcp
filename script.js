@@ -208,23 +208,23 @@ function submitContactForm(name, email, message, recaptchaToken) {
             name: name,
             email: email,
             message: message,
-            subject: 'New Contact Form Message from myPCP Website',
+            _subject: 'Contact from myPCP Website',
             _replyto: email,
             _captcha: recaptchaToken ? 'reCAPTCHA verified' : 'N/A'
         })
     })
     .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
+        console.log('Response status:', response.status);
         return response.json();
     })
     .then(data => {
-        console.log('Contact form submitted successfully', data);
-        if (data.ok || data.success) {
+        console.log('Response data:', data);
+        // Formspree returns {ok: true} on success
+        if (data.ok) {
             openConfirmationModal();
             document.getElementById('contactForm').reset();
         } else {
+            console.error('Formspree returned error:', data);
             alert('There was an error. Please call us at (786) 525-5664.');
         }
     })
@@ -338,21 +338,20 @@ function submitAppointmentForm(patientName, patientEmail, patientPhone, serviceL
             serviceType: serviceLabel,
             appointmentDate: appointmentDate,
             appointmentTime: appointmentTime,
-            subject: 'New Appointment Request from myPCP Website',
+            _subject: 'Appointment Request from myPCP Website',
             _replyto: patientEmail,
             _captcha: recaptchaToken ? 'reCAPTCHA verified' : 'N/A'
         })
     })
     .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
+        console.log('Response status:', response.status);
         return response.json();
     })
     .then(data => {
-        console.log('Appointment submitted successfully', data);
+        console.log('Response data:', data);
         
-        if (data.ok || data.success) {
+        // Formspree returns {ok: true} on success
+        if (data.ok) {
             // Close appointment modal and show confirmation
             closeAppointmentModal();
             
@@ -371,6 +370,7 @@ function submitAppointmentForm(patientName, patientEmail, patientPhone, serviceL
             // Reset form
             document.getElementById('appointmentForm').reset();
         } else {
+            console.error('Formspree returned error:', data);
             alert('There was an error. Please call us at (786) 525-5664.');
         }
     })
