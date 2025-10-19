@@ -40,7 +40,7 @@ body {
     font-family: var(--font-body);
     color: var(--gray-black);
     line-height: 1.6;
-    background-color: var(--off-white);
+    background-color: #FFFFFF;
 }
 
 .container {
@@ -69,8 +69,9 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(249, 245, 233, 0.95);
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     z-index: 1000;
     padding: 1rem 0;
     transition: all 0.3s ease;
@@ -1109,8 +1110,8 @@ a:focus {
 
 /* Form Notice Styles */
 .form-notice {
-    background: #fff3cd;
-    border-left: 4px solid #ffc107;
+    background: #f8f9fa;
+    border-left: 4px solid #3CB6AD;
     padding: 15px 20px;
     margin-bottom: 20px;
     border-radius: 4px;
@@ -1119,12 +1120,12 @@ a:focus {
 .form-notice p {
     margin: 0;
     font-size: 0.95rem;
-    color: #856404;
+    color: #495057;
     line-height: 1.6;
 }
 
 .form-notice a {
-    color: #856404;
+    color: #3CB6AD;
     font-weight: 600;
     text-decoration: underline;
 }
@@ -1145,32 +1146,26 @@ a:focus {
 
 /* Modal Scroll Fix */
 .modal-content {
-    max-height: 90vh !important;
-    overflow-y: auto !important;
+    max-height: 90vh;
+    overflow-y: auto;
     position: relative;
 }
 
-.modal-content form {
-    max-height: calc(90vh - 120px);
-    overflow-y: auto;
-    padding-right: 10px;
-}
-
 /* Scrollbar styling for modal */
-.modal-content form::-webkit-scrollbar {
+.modal-content::-webkit-scrollbar {
     width: 8px;
 }
 
-.modal-content form::-webkit-scrollbar-track {
+.modal-content::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 4px;
 }
 
-.modal-content form::-webkit-scrollbar-thumb {
+.modal-content::-webkit-scrollbar-thumb {
     background: #3CB6AD;
     border-radius: 4px;
 }
 
-.modal-content form::-webkit-scrollbar-thumb:hover {
+.modal-content::-webkit-scrollbar-thumb:hover {
     background: #2E8C83;
 }
