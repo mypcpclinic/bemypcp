@@ -1188,35 +1188,53 @@ a:focus {
 .shape {
     position: absolute;
     border-radius: 50%;
-    opacity: 0.08;
+    opacity: 0.12;
     animation: float 20s infinite ease-in-out;
 }
 
 .shape-1 {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     background: linear-gradient(135deg, #3CB6AD 0%, #2E8C83 100%);
-    top: 10%;
-    left: -10%;
+    top: 5%;
+    left: -15%;
     animation-delay: 0s;
 }
 
 .shape-2 {
-    width: 200px;
-    height: 200px;
+    width: 350px;
+    height: 350px;
     background: linear-gradient(135deg, #3CB6AD 0%, #5DD4C9 100%);
-    top: 60%;
-    right: -5%;
+    top: 50%;
+    right: -10%;
     animation-delay: 5s;
 }
 
 .shape-3 {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     background: linear-gradient(135deg, #2E8C83 0%, #3CB6AD 100%);
-    bottom: 20%;
-    left: 50%;
+    bottom: 10%;
+    left: 45%;
     animation-delay: 10s;
+}
+
+.shape-4 {
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(135deg, #5DD4C9 0%, #3CB6AD 100%);
+    top: 30%;
+    left: 20%;
+    animation-delay: 3s;
+}
+
+.shape-5 {
+    width: 280px;
+    height: 280px;
+    background: linear-gradient(135deg, #3CB6AD 0%, #5DD4C9 100%);
+    bottom: 30%;
+    right: 15%;
+    animation-delay: 7s;
 }
 
 @keyframes float {
@@ -1585,5 +1603,33 @@ a:focus {
     
     .stats-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Desktop-specific enhancements for floating shapes */
+@media (min-width: 1024px) {
+    .shape {
+        opacity: 0.15;
+    }
+    
+    .shape-1 {
+        width: 500px;
+        height: 500px;
+    }
+    
+    .shape-2 {
+        width: 450px;
+        height: 450px;
+    }
+}
+
+/* Mobile adjustments for shapes */
+@media (max-width: 768px) {
+    .shape {
+        opacity: 0.08;
+    }
+    
+    .shape-4, .shape-5 {
+        display: none;
     }
 }
