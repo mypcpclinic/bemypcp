@@ -56,12 +56,14 @@ document.querySelectorAll('.cta-button').forEach(button => {
 });
 
 function openAppointmentModal() {
-    appointmentModal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-    
-    // Set minimum date to today
-    const today = new Date().toISOString().split('T')[0];
-    document.getElementById('appointmentDate').setAttribute('min', today);
+    // Open Calendly popup instead of custom modal
+    if (typeof Calendly !== 'undefined') {
+        Calendly.initPopupWidget({url: 'https://calendly.com/mypcpclinic/booking'});
+    } else {
+        // Fallback if Calendly fails to load
+        window.open('https://calendly.com/mypcpclinic/booking', '_blank');
+    }
+    return false;
 }
 
 function closeAppointmentModal() {
