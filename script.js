@@ -213,7 +213,8 @@ function submitContactForm(name, email, message, recaptchaToken) {
             message: message,
             _subject: 'Contact from myPCP Website',
             _replyto: email,
-            _captcha: recaptchaToken ? 'reCAPTCHA verified' : 'N/A'
+            _captcha: recaptchaToken ? 'reCAPTCHA verified' : 'N/A',
+            _autoresponse: 'Thank you for contacting myPCP! We have received your message and will get back to you within 24 hours. If you need immediate assistance, please call us at (786) 525-5664.'
         })
     })
     .then(response => {
@@ -343,7 +344,8 @@ function submitAppointmentForm(patientName, patientEmail, patientPhone, serviceL
             appointmentTime: appointmentTime,
             _subject: 'Appointment Request from myPCP Website',
             _replyto: patientEmail,
-            _captcha: recaptchaToken ? 'reCAPTCHA verified' : 'N/A'
+            _captcha: recaptchaToken ? 'reCAPTCHA verified' : 'N/A',
+            _autoresponse: 'Thank you for your appointment request at myPCP! We have received your request for ' + serviceLabel + ' on ' + appointmentDate + ' at ' + appointmentTime + '. We will contact you shortly to confirm your appointment. If you have any questions, please call us at (786) 525-5664.'
         })
     })
     .then(response => {

@@ -1142,3 +1142,35 @@ a:focus {
     height: 1px !important;
     overflow: hidden !important;
 }
+
+/* Modal Scroll Fix */
+.modal-content {
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+    position: relative;
+}
+
+.modal-content form {
+    max-height: calc(90vh - 120px);
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Scrollbar styling for modal */
+.modal-content form::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content form::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.modal-content form::-webkit-scrollbar-thumb {
+    background: #3CB6AD;
+    border-radius: 4px;
+}
+
+.modal-content form::-webkit-scrollbar-thumb:hover {
+    background: #2E8C83;
+}
