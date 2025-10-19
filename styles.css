@@ -1849,3 +1849,341 @@ a:focus {
         font-size: 0.85rem;
     }
 }
+
+/* Floating Call Button */
+.floating-call-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+.call-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #3CB6AD 0%, #2E8C83 100%);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 4px 20px rgba(60, 182, 173, 0.4);
+    transition: all 0.3s ease;
+}
+
+.call-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(60, 182, 173, 0.6);
+    color: white;
+}
+
+.call-button svg {
+    flex-shrink: 0;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 20px rgba(60, 182, 173, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(60, 182, 173, 0.8);
+    }
+    100% {
+        box-shadow: 0 4px 20px rgba(60, 182, 173, 0.4);
+    }
+}
+
+@media (max-width: 768px) {
+    .floating-call-btn {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .call-button {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .call-button span {
+        display: none;
+    }
+}
+
+/* New Patient Section */
+.new-patient {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 4rem 0;
+}
+
+.new-patient-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.patient-info h3,
+.patient-prep h3 {
+    font-size: 1.8rem;
+    color: var(--gray-black);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.expectation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.expectation-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.expectation-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(60, 182, 173, 0.2);
+}
+
+.expectation-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.expectation-item h4 {
+    font-size: 1.1rem;
+    color: var(--gray-black);
+    margin-bottom: 0.5rem;
+}
+
+.expectation-item p {
+    font-size: 0.9rem;
+    color: var(--medium-gray);
+    line-height: 1.6;
+}
+
+.prep-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.prep-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.prep-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(60, 182, 173, 0.15);
+}
+
+.prep-number {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #3CB6AD 0%, #2E8C83 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.prep-content h4 {
+    font-size: 1.1rem;
+    color: var(--gray-black);
+    margin-bottom: 0.5rem;
+}
+
+.prep-content p {
+    font-size: 0.9rem;
+    color: var(--medium-gray);
+    line-height: 1.6;
+}
+
+/* Insurance Section */
+.insurance {
+    background: white;
+    padding: 4rem 0;
+}
+
+.insurance-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.insurance-info h3,
+.coming-soon h3 {
+    font-size: 1.8rem;
+    color: var(--gray-black);
+    margin-bottom: 1rem;
+}
+
+.insurance-info p,
+.coming-soon p {
+    font-size: 1rem;
+    color: var(--medium-gray);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.insurance-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.insurance-category {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 15px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.insurance-category h4 {
+    font-size: 1.1rem;
+    color: var(--gray-black);
+    margin-bottom: 1rem;
+}
+
+.insurance-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.insurance-category li {
+    padding: 0.3rem 0;
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.insurance-category li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.coming-soon {
+    background: linear-gradient(135deg, #3CB6AD 0%, #2E8C83 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.coming-soon h3 {
+    color: white;
+}
+
+.coming-soon p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.coming-soon-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.8rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.feature-icon {
+    font-size: 1.2rem;
+}
+
+/* Enhanced Team Credentials */
+.credentials {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin: 1.5rem 0;
+    border-left: 4px solid var(--primary-color);
+}
+
+.credentials h4 {
+    font-size: 1.2rem;
+    color: var(--gray-black);
+    margin-bottom: 1rem;
+}
+
+.credentials ul {
+    list-style: none;
+    padding: 0;
+}
+
+.credentials li {
+    padding: 0.5rem 0;
+    color: var(--medium-gray);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.credentials li:before {
+    content: "🏆";
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+    .new-patient-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .insurance-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .insurance-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .expectation-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .coming-soon-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .new-patient,
+    .insurance {
+        padding: 3rem 0;
+    }
+}
