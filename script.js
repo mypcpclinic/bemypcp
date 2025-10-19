@@ -203,10 +203,11 @@ window.addEventListener('click', function(event) {
 });
 
 // FAQ Toggle functionality
-document.querySelectorAll('.faq-toggle').forEach(toggle => {
-    toggle.addEventListener('click', function() {
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', function() {
         const faqItem = this.closest('.faq-item');
         const answer = faqItem.querySelector('.faq-answer');
+        const toggle = faqItem.querySelector('.faq-toggle');
         
         // Close all other FAQ items
         document.querySelectorAll('.faq-item').forEach(item => {
@@ -228,10 +229,10 @@ document.querySelectorAll('.faq-toggle').forEach(toggle => {
         
         if (faqItem.classList.contains('active')) {
             answer.style.maxHeight = answer.scrollHeight + 'px';
-            this.textContent = '−';
+            toggle.textContent = '−';
         } else {
             answer.style.maxHeight = null;
-            this.textContent = '+';
+            toggle.textContent = '+';
         }
     });
 });
