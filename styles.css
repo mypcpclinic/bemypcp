@@ -1633,3 +1633,142 @@ a:focus {
         display: none;
     }
 }
+
+/* Trust Section */
+.trust-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 3rem 0;
+    margin: 3rem 0;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.trust-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.trust-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.trust-header h3 {
+    font-size: 2rem;
+    color: var(--gray-black);
+    margin: 0;
+}
+
+.trust-badges {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.trust-badge {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.trust-badge:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(60, 182, 173, 0.2);
+}
+
+.badge-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #E8F4F3 0%, #D1EDE9 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-content h4 {
+    font-size: 1.1rem;
+    color: var(--gray-black);
+    margin: 0 0 0.3rem 0;
+}
+
+.badge-content p {
+    font-size: 0.9rem;
+    color: var(--medium-gray);
+    margin: 0;
+}
+
+/* Testimonial */
+.trust-testimonial {
+    background: linear-gradient(135deg, #3CB6AD 0%, #2E8C83 100%);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(60, 182, 173, 0.3);
+}
+
+.testimonial-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.quote-icon {
+    font-size: 4rem;
+    opacity: 0.3;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.testimonial-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.author-stars {
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+}
+
+.author-name {
+    font-size: 0.95rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Mobile responsive for trust section */
+@media (max-width: 768px) {
+    .trust-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .trust-badges {
+        grid-template-columns: 1fr;
+    }
+    
+    .trust-testimonial {
+        padding: 1.5rem;
+    }
+    
+    .testimonial-text {
+        font-size: 1rem;
+    }
+}
