@@ -111,10 +111,13 @@ function sendEmail() {
         link.onclick = null;
     }
     // Also update footer email links
-    document.querySelectorAll('[onclick*="sendEmail"]').forEach(el => {
-        el.href = 'mailto:' + em;
-        el.textContent = em;
-        el.onclick = null;
+    const footerLinks = document.querySelectorAll('a[onclick]');
+    footerLinks.forEach(el => {
+        if (el.getAttribute('onclick') && el.getAttribute('onclick').includes('sendEmail')) {
+            el.href = 'mailto:' + em;
+            el.textContent = em;
+            el.onclick = null;
+        }
     });
 }
 
