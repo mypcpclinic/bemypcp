@@ -103,6 +103,17 @@ h1, h2, h3, h4, h5, h6 {
     object-fit: contain;
 }
 
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
